@@ -22,10 +22,17 @@ body{
     flex-flow: row nowrap;
     justify-content: space-between;
     border-bottom: 1px solid #fff;
-    background: rgba(34, 168, 126, .5);
+    background: #000;
     
     
 }
+    .textoNav{
+        color:#fff;
+        margin: 20px 0 0 80px;
+        font-size: 25px;
+        font-family: 'Bebas Neue', cursive;
+
+    }
 
 .logo{
     margin: 15px 0 5px 30px;
@@ -229,6 +236,9 @@ body{
         }
 }
 @media screen and (max-width: 580px){
+    .textoNav{
+        display: none;
+    }
     .encabezado{
         height: 500px;
     }
