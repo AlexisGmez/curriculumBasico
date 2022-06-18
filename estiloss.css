@@ -1,0 +1,272 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 1px;
+}
+  
+.contenedor{
+    display: grid;
+    grid-template-rows: 1/2fr 4fr 3fr 1fr;
+    grid-template-areas: "nav nav nav nav"
+                          "encabezado encabezado encabezado encabezado"
+                          "curriculum curriculum tarjetas tarjetas"
+                          "pie pie pie pie";
+}
+.nav{
+
+    grid-area: nav;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    background: rgba(34, 168, 126, .5);
+    
+    
+}
+
+.logo{
+    margin: 15px 0 5px 30px;
+    
+}
+    .logo img{
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;  
+    }
+
+.sociales{
+    margin: 25px 30px 5px 0px;
+        
+}
+    .sociales a{
+        text-decoration: none;
+        color:#fff;
+        font-size: 30px;
+        margin-right: 30px;
+    }
+
+    .sociales a:hover{
+       color: grey;
+    }
+
+.encabezado{
+    grid-area: encabezado;
+    width: 100%;
+    height: 700px;
+    background: #53BF9D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(135, 76%, 37%, 0.445),rgba(28, 165, 165, 0.664)), url(img/img1.png);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(192, 76%, 23%, 0.459),rgba(24, 128, 128, 0.664)), url(img/img1.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: relative;
+    background-repeat: no-repeat;
+}
+    .wave{
+        position: absolute;
+        bottom: -138px;
+        width: 100%;
+        
+    }
+
+.curriculum{
+    grid-area: curriculum;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+    .imagenPrincipal{
+        width: 600px;
+        text-align: center;
+        padding: 30px;
+        margin: 20px;
+        border: solid 2px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px 2px #888888;
+        
+    }
+        .imagenPrincipal img{
+            border-radius: 50%;
+            width: 300px;
+            
+        }
+    .tarjetas{
+        grid-area: tarjetas;
+        
+        
+    }   
+        
+        .tituloButton{
+            display: flex;
+            justify-content: center;
+            
+        }
+            .tarjetas h1{
+                font-size: 30px;
+                margin-right: 20px;
+                margin-top: 10px;
+            }
+            .tarjetas button{
+                padding: 10px;
+                margin: 10px;
+
+            }
+            #green{
+                background: rgb(21, 173, 29);
+                border-radius: 10px;
+                border: none;
+                color: #fff;
+                font-size: 16px;
+                 
+            }
+                #green:hover{
+                    background: rgb(0, 255, 17);
+                }
+
+            #red{
+                background: rgb(173, 30, 30);
+                border-radius: 10px;
+                border: none;
+                color: #fff;
+                font-size: 16px;
+            }
+                #red:hover{
+                    background: rgb(255, 0, 0);
+                }
+
+        .tarjeta{
+            border: solid 2px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 8px 2px #888888;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .tarjet{
+            margin: 10px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .tarjet img{
+            width: 460px;
+        }
+
+.pie{
+    grid-area: pie;
+    background: #000;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .pie p{
+        background: #000;
+        text-align: center;
+        color: #fff;
+        
+    }
+
+.uno{
+    background: yellow;
+}
+.dos{
+    background: rgb(199, 67, 27);
+}
+.tres{
+    background: rgb(246, 248, 246);
+}
+.cuatro{
+    background: rgb(92, 219, 88);
+}
+.cinco{
+    background: rgb(212, 51, 172);
+}
+.seis{
+    background: rgb(245, 47, 113);
+}
+.siete{
+    background: rgb(197, 132, 11);
+}
+.ocho{
+    background: rgb(247, 247, 241);
+}
+
+@media screen and (max-width: 1124px) {
+    .contenedor{
+        
+        grid-template-areas: "nav nav nav nav"
+                              "encabezado encabezado encabezado encabezado"
+                              "curriculum curriculum curriculum curriculum"
+                              "tarjetas tarjetas tarjetas tarjetas"
+                              "pie pie pie pie";
+    }
+    .wave{
+        bottom: -160px;
+    }
+    .curriculum{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .imagenPrincipal{
+            width: 500px;
+            height: 500px;
+            
+        }
+    .tarjetas{
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .tarjetas img{
+            width: 400px;
+        }
+}
+@media screen and (max-width: 580px){
+    .encabezado{
+        height: 500px;
+    }
+    .wave{
+        bottom: 50px;
+    }
+    .imagenPrincipal{
+        width: 300px;
+        height: 400px;
+    }
+        .imagenPrincipal img{
+            width: 300px;
+            height: 320px;
+        }
+        .imagenPrincipal h2{
+            font-size: 20px;
+        }
+        .imagenPrincipal h3{
+            font-size: 15px;
+        }
+    .tarjetas{
+        height: 400px;
+    }
+        .tarjetas h1{
+            font-size: 20px;
+        }
+        #green,#red{
+            font-size: 12px;
+        }
+        .tarjetas img{
+            width: 300px;
+        }
+        .tarjet{
+            height: 50px;
+            font-size: 10px;
+        }
+    .pie p{
+        font-size: 11px;
+    }
+
+}
