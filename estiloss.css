@@ -297,7 +297,7 @@ body{
         height: 400px;
     }
     .wave{
-        bottom: 10px;
+        display: none;
     }
     .tarjetas{
         height: 500px;
