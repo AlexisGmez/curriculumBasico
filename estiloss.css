@@ -73,7 +73,7 @@ body{
 }
     .wave{
         position: absolute;
-        bottom: -138px;
+        bottom: -150px;
         width: 100%;
         
     }
@@ -202,8 +202,7 @@ body{
 .ocho{
     background: rgb(247, 247, 241);
 }
-
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1200px) {
     .contenedor{
         
         grid-template-areas: "nav nav nav nav"
@@ -235,7 +234,12 @@ body{
             width: 400px;
         }
 }
-@media screen and (max-width: 580px){
+@media screen and (max-width: 740px){
+    .wave{
+        bottom: -180px;
+    }
+}
+@media screen and (max-width: 650px){
     .textoNav{
         display: none;
     }
@@ -279,4 +283,24 @@ body{
         font-size: 11px;
     }
 
+}
+@media screen and (max-width: 405px){
+    .logo{
+        display: none;
+    }
+    .sociales{
+        margin: 15px auto;
+
+    }
+    .encabezado{
+        
+        height: 400px;
+    }
+    .wave{
+        bottom: 10px;
+    }
+    .tarjetas{
+        height: 500px;
+    }
+        
 }
